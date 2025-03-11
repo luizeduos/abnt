@@ -33,6 +33,7 @@
 }
 
 .nav ul li a {
+    font-size: 1rem !important; 
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -42,11 +43,19 @@
     }
 }
 
+.nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 .banner {
     width: 100%;
     height: 80vh;
     overflow: hidden;
     position: relative;
+    border-radius: 20px 20px 0 0 ;
 }
 
 .banner::before {
@@ -62,9 +71,10 @@
 
 .banner img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: 0px -70px;
     overflow: hidden;
-    border-radius: 20px 20px 0 0 ;
+
 }
 
 .content {
@@ -92,6 +102,86 @@
     margin-bottom: 15px;
 }
 
-#formatacao h3 {
-    margin-top: 30px;
+.e1 {
+    margin-left: 10px;
+}
+
+.e2 {
+    margin-left: 25px;
+}
+
+.botao {
+    width: 30%;
+    padding: 15px 0 !important;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    justify-self: center;
+    align-self: center;
+    margin-top: 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: #4d4d4d;
+    }
+}
+
+.botao a {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer {
+    margin: 0 !important;
+    padding: 0;
+    background-color: #252525;
+    height: 80px !important;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+    transition: all .5s;
+}
+
+.footer a:hover {
+    color: #575291;
+}
+
+@media(max-width: 767px) {
+    .nav ul {
+        display: none;
+    }
+
+    .banner {
+        width: 100vw;
+    }
+    .banner::before {
+        background: linear-gradient(to top, #ffffff 15%, #ffffff00 50%);
+    }
+
+    .banner img {
+        height: 100% !important;
+        width: 500% !important ;
+        object-fit: contain !important;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .botao {
+        width: 100%;
+        justify-self: center;
+        align-items: center;
+    }
 }
